@@ -11,6 +11,12 @@ public class TennisTest {
         assertThat(tennis.score(0, 0)).isEqualTo("LoveLove");
 
     }
+    @Test
+    void testPlayerOneScoresOnce_ShouldBeFifteenLove() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(15, 0)).isEqualTo("FifteenLove");
+
+    }
 
 
 
