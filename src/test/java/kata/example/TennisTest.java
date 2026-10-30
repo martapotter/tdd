@@ -8,13 +8,13 @@ public class TennisTest {
     @Test
     void shouldReturnLoveLove_OnStart() {
         Tennis tennis = new Tennis();
-        assertThat(tennis.score(0, 0)).isEqualTo("LoveLove");
+        assertThat(tennis.score(0, 0)).isEqualTo("Love-Love");
 
     }
     @Test
     void testPlayerOneScoresOnce_ShouldBeFifteenLove() {
         Tennis tennis = new Tennis();
-        assertThat(tennis.score(15, 0)).isEqualTo("FifteenLove");
+        assertThat(tennis.score(1, 0)).isEqualTo("Fifteen-Love");
 
     }
 
