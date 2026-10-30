@@ -9,6 +9,7 @@ public class Tennis {
     public String scoreToWords(int points) {
         switch (points) {
             case 0: return "Love";
+            case 1: return "Fifteen";
             default: return "";
         }
     }
