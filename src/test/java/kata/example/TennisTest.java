@@ -18,6 +18,17 @@ public class TennisTest {
 
     }
 
+    @Test
+    void testPlayerTwoScoresOnce_ShouldBeLoveFifteen() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(0, 1)).isEqualTo("Love-Fifteen");
 
+    } ///paso este test sin empezarlo, por el switch que he metido
 
+    @Test
+    void testBothPlayersScoreOnce_ShouldBeFifteenAll() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(1, 1)).isEqualTo("FifteenAll");
+
+    }
 }
