@@ -28,7 +28,7 @@ public class TennisTest {
     @Test
     void testBothPlayersScoreOnce_ShouldBeFifteenAll() {
         Tennis tennis = new Tennis();
-        assertThat(tennis.score(1, 1)).isEqualTo("FifteenAll");
+        assertThat(tennis.score(1, 1)).isEqualTo("Fifteen-All");
 
     }
 }
