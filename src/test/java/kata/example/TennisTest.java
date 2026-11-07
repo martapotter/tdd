@@ -55,4 +55,22 @@ public class TennisTest {
         Tennis tennis = new Tennis();
         assertThat(tennis.score(4, 3)).isEqualTo("Advantage Player 1");
     }
+
+    @Test
+    void testPlayerTwoAdvantageAfterDeuce_ShouldBeAdvantagePlayerTwo() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(3, 4)).isEqualTo("Advantage Player 2");
+    }
+
+    @Test
+    void testPlayerOneWinsAfterAdvantage_ShouldBeWinPlayerOne() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(5, 3)).isEqualTo("Player 1 wins");
+    }
+
+    @Test
+    void testPlayerTwoWinsAfterAdvantage_ShouldBeWinPlayerTwo() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(3, 5)).isEqualTo("Player 2 wins");
+    }
 }
