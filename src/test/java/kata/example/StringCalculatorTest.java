@@ -10,4 +10,16 @@ public class StringCalculatorTest {
         assertThat(calculator.add("")).isEqualTo(0);
     }
 
+    @Test
+    void shouldReturnNumWhenInputIsOneNUm() {
+        StringCalculator calculator = new StringCalculator();
+        assertThat(calculator.add("1")).isEqualTo(1);
+    }
+
+    @Test
+    void shouldReturnSumWithComma() {
+        StringCalculator calculator = new StringCalculator();
+        assertThat(calculator.add("1,1")).isEqualTo(2);
+    }
+
 }
