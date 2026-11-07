@@ -73,4 +73,10 @@ public class TennisTest {
         Tennis tennis = new Tennis();
         assertThat(tennis.score(3, 5)).isEqualTo("Player 2 wins");
     }
+
+    @Test
+    void testPlayerOneWinsByTwoPoints_ShouldBeWinPlayerOne() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(4, 0)).isEqualTo("Player 1 wins");
+    }
 }
