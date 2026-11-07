@@ -31,4 +31,28 @@ public class TennisTest {
         assertThat(tennis.score(1, 1)).isEqualTo("Fifteen-All");
 
     }
+
+    @Test
+    void testPlayerOneScoresTwice_ShouldBeThirtyLove() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(2, 0)).isEqualTo("Thirty-Love");
+    } ///tambien lo paso por defecto
+
+    @Test
+    void testPlayerTwoScoresTwice_ShouldBeLoveThirty() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(0, 2)).isEqualTo("Love-Thirty");
+    }
+
+    @Test
+    void testScoreIsFortyAll_ShouldBeDeuce() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(3, 3)).isEqualTo("Deuce");
+    }
+
+    @Test
+    void testPlayerOneAdvantageAfterDeuce_ShouldBeAdvantagePlayerOne() {
+        Tennis tennis = new Tennis();
+        assertThat(tennis.score(4, 3)).isEqualTo("Advantage Player 1");
+    }
 }
